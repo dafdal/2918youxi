@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2918.io - 免费小游戏集合</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        header {
+            background-color: #ff6600;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap:30px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size:16px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding:0 20px;
+        }
+        .title {
+            font-size:22px;
+            margin-bottom:16px;
+            color:#333;
+        }
+        .game-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap:18px;
+        }
+        .game-card {
+            border:1px solid #eee;
+            border-radius:8px;
+            overflow:hidden;
+            cursor:pointer;
+            transition: all 0.2s;
+            background:#fff;
+        }
+        .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px #00000022;
+        }
+        .game-img {
+            width:100%;
+            height:110px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            font-size:14px;
+            font-weight:bold;
+        }
+        .game-name {
+            padding:8px;
+            font-size:14px;
+            text-align:center;
+            color:#222;
+        }
+        footer {
+            margin-top:40px;
+            padding:20px;
+            text-align:center;
+            color:#777;
+            font-size:14px;
+            background:#f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">2918.io</div>
+        <nav>
+            <a href="#">首页</a>
+            <a href="#">动作游戏</a>
+            <a href="#">休闲游戏</a>
+            <a href="#">射击游戏</a>
+            <a href="#">益智游戏</a>
+            <a href="#">双人游戏</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2 class="title">全部小游戏（共100款）</h2>
+        <div class="game-list">
+            <!--1-->
+            <div class="game-card" onclick="window.open('game1.html')">
+                <div class="game-img" style="background:#22aa66;">猜数字</div>
+                <div class="game-name">猜数字大师</div>
+            </div>
+            <!--2-->
+            <div class="game-card" onclick="window.open('game2.html')">
+                <div class="game-img" style="background:#4488ff;">消消乐</div>
+                <div class="game-name">缤纷消消乐</div>
+            </div>
+            <!--3-->
+            <div class="game-card" onclick="window.open('game3.html')">
+                <div class="game-img" style="background:#111111;">贪吃蛇</div>
+                <div class="game-name">经典贪吃蛇</div>
+            </div>
+            <!--4-->
+            <div class="game-card" onclick="window.open('game4.html')">
+                <div class="game-img" style="background:#dd3333;">打砖块</div>
+                <div class="game-name">弹力打砖块</div>
+            </div>
+            <!--5-->
+            <div class="game-card" onclick="window.open('game5.html')">
+                <div class="game-img" style="background:#ffbb22;">2048</div>
+                <div class="game-name">数字2048</div>
+            </div>
+            <!--6-->
+            <div class="game-card" onclick="window.open('game6.html')">
+                <div class="game-img" style="background:#9944dd;">五子棋</div>
+                <div class="game-name">双人五子棋</div>
+            </div>
+            <!--7-->
+            <div class="game-card" onclick="window.open('game7.html')">
+                <div class="game-img" style="background:#22bbbb;">点按方块</div>
+                <div class="game-name">反应力方块</div>
+            </div>
+            <!--8-->
+            <div class="game-card" onclick="window.open('game8.html')">
+                <div class="game-img" style="background:#77aa22;">接苹果</div>
+                <div class="game-name">苹果大作战</div>
+            </div>
+            <!--9-->
+            <div class="game-card" onclick="window.open('game9.html')">
+                <div class="game-img" style="background:#ee7722;">躲炸弹</div>
+                <div class="game-name">炸弹逃亡</div>
+            </div>
+            <!--10-->
+            <div class="game-card" onclick="window.open('game10.html')">
+                <div class="game-img" style="background:#3377bb;">拼图</div>
+                <div class="game-name">简易拼图</div>
+            </div>
+            <!--11-->
+            <div class="game-card" onclick="window.open('game11.html')">
+                <div class="game-img" style="background:#bb3377;">记忆翻牌</div>
+                <div class="game-name">卡牌记忆</div>
+            </div>
+            <!--12-->
+            <div class="game-card" onclick="window.open('game12.html')">
+                <div class="game-img" style="background:#55bb88;">跳一跳</div>
+                <div class="game-name">迷你跳一跳</div>
+            </div>
+            <!--13-->
+            <div class="game-card" onclick="window.open('game13.html')">
+                <div class="game-img" style="background:#aa7722;">打地鼠</div>
+                <div class="game-name">疯狂打地鼠</div>
+            </div>
+            <!--14-->
+            <div class="game-card" onclick="window.open('game14.html')">
+                <div class="game-img" style="background:#662299;">颜色挑战</div>
+                <div class="game-name">颜色大考验</div>
+            </div>
+            <!--15-->
+            <div class="game-card" onclick="window.open('game15.html')">
+                <div class="game-img" style="background:#227799;">太空射击</div>
+                <div class="game-name">太空战机</div>
+            </div>
+            <!--16-->
+            <div class="game-card" onclick="window.open('game16.html')">
+                <div class="game-img" style="background:#cc2255;">赛跑竞速</div>
+                <div class="game-name">像素赛跑</div>
+            </div>
+            <!--17-->
+            <div class="game-card" onclick="window.open('game17.html')">
+                <div class="game-img" style="background:#44aa77;">推箱子</div>
+                <div class="game-name">经典推箱子</div>
+            </div>
+            <!--18-->
+            <div class="game-card" onclick="window.open('game18.html')">
+                <div class="game-img" style="background:#bb8811;">数字消消</div>
+                <div class="game-name">数字消除</div>
+            </div>
+            <!--19-->
+            <div class="game-card" onclick="window.open('game19.html')">
+                <div class="game-img" style="background:#773366;">迷宫逃脱</div>
+                <div class="game-name">简易迷宫</div>
+            </div>
+            <!--20-->
+            <div class="game-card" onclick="window.open('game20.html')">
+                <div class="game-img" style="background:#339955;">青蛙过河</div>
+                <div class="game-name">青蛙大冒险</div>
+            </div>
+            <!--21-->
+            <div class="game-card" onclick="window.open('game21.html')">
+                <div class="game-img" style="background:#5533bb;">泡泡龙</div>
+                <div class="game-name">泡泡龙射击</div>
+            </div>
+            <!--22-->
+            <div class="game-card" onclick="window.open('game22.html')">
+                <div class="game-img" style="background:#dd77aa;">切水果</div>
+                <div class="game-name">指尖切水果</div>
+            </div>
+            <!--23-->
+            <div class="game-card" onclick="window.open('game23.html')">
+                <div class="game-img" style="background:#2288bb;">赛车</div>
+                <div class="game-name">像素赛车</div>
+            </div>
+            <!--24-->
+            <div class="game-card" onclick="window.open('game24.html')">
+                <div class="game-img" style="background:#99bb33;">接金币</div>
+                <div class="game-name">金币收集者</div>
+            </div>
+            <!--25-->
+            <div class="game-card" onclick="window.open('game25.html')">
+                <div class="game-img" style="background:#bb4422;">大炮射击</div>
+                <div class="game-name">大炮打靶</div>
+            </div>
+            <!--26-->
+            <div class="game-card" onclick="window.open('game26.html')">
+                <div class="game-img" style="background:#224477;">潜艇大战</div>
+                <div class="game-name">深海潜艇</div>
+            </div>
+            <!--27-->
+            <div class="game-card" onclick="window.open('game27.html')">
+                <div class="game-img" style="background:#77ddbb;">水滴消除</div>
+                <div class="game-name">水滴消消</div>
+            </div>
+            <!--28-->
+            <div class="game-card" onclick="window.open('game28.html')">
+                <div class="game-img" style="background:#885522;">挖矿</div>
+                <div class="game-name">黄金矿工简易版</div>
+            </div>
+            <!--29-->
+            <div class="game-card" onclick="window.open('game29.html')">
+                <div class="game-img" style="background:#66bb44;">跳跳鸟</div>
+                <div class="game-name">像素小鸟</div>
+            </div>
+            <!--30-->
+            <div class="game-card" onclick="window.open('game30.html')">
+                <div class="game-img" style="background:#aa2288;">泡泡大战</div>
+                <div class="game-name">泡泡对战</div>
+            </div>
+            <!--31-->
+            <div class="game-card" onclick="window.open('game31.html')">
+                <div class="game-img" style="background:#33bbbb;">方块堆叠</div>
+                <div class="game-name">堆叠方块</div>
+            </div>
+            <!--32-->
+            <div class="game-card" onclick="window.open('game32.html')">
+                <div class="game-img" style="background:#bb6677;">气球射击</div>
+                <div class="game-name">射气球</div>
+            </div>
+            <!--33-->
+            <div class="game-card" onclick="window.open('game33.html')">
+                <div class="game-img" style="background:#558822;">农场捉虫</div>
+                <div class="game-name">农场除虫</div>
+            </div>
+            <!--34-->
+            <div class="game-card" onclick="window.open('game34.html')">
+                <div class="game-img" style="background:#4422aa;">宝石配对</div>
+                <div class="game-name">宝石对对碰</div>
+            </div>
+            <!--35-->
+            <div class="game-card" onclick="window.open('game35.html')">
+                <div class="game-img" style="background:#ccaa44;">接蛋糕</div>
+                <div class="game-name">蛋糕派送</div>
+            </div>
+            <!--36-->
+            <div class="game-card" onclick="window.open('game36.html')">
+                <div class="game-img" style="background:#229977;">海底冒险</div>
+                <div class="game-name">海底寻宝</div>
+            </div>
+            <!--37-->
+            <div class="game-card" onclick="window.open('game37.html')">
+                <div class="game-img" style="background:#993322;">火焰躲避</div>
+                <div class="game-name">逃离火海</div>
+            </div>
+            <!--38-->
+            <div class="game-card" onclick="window.open('game38.html')">
+                <div class="game-img" style="background:#6644bb;">文字猜谜</div>
+                <div class="game-name">趣味猜谜</div>
+            </div>
+            <!--39-->
+            <div class="game-card" onclick="window.open('game39.html')">
+                <div class="game-img" style="background:#226644;">森林采果</div>
+                <div class="game-name">森林采摘</div>
+            </div>
+            <!--40-->
+            <div class="game-card" onclick="window.open('game40.html')">
+                <div class="game-img" style="background:#dd9933;">陀螺对战</div>
+                <div class="game-name">陀螺决斗</div>
+            </div>
+            <!--41-->
+            <div class="game-card" onclick="window.open('game41.html')">
+                <div class="game-img" style="background:#7722bb;">魔法方块</div>
+                <div class="game-name">魔法方块消除</div>
+            </div>
+            <!--42-->
+            <div class="game-card" onclick="window.open('game42.html')">
+                <div class="game-img" style="background:#337766;">河流渡河</div>
+                <div class="game-name">渡河挑战</div>
+            </div>
+            <!--43-->
+            <div class="game-card" onclick="window.open('game43.html')">
+                <div class="game-img" style="background:#bb7744;">烤肉大师</div>
+                <div class="game-name">烧烤模拟器</div>
+            </div>
+            <!--44-->
+            <div class="game-card" onclick="window.open('game44.html')">
+                <div class="game-img" style="background:#552277;">幽灵躲避</div>
+                <div class="game-name">逃离幽灵</div>
+            </div>
+            <!--45-->
+            <div class="game-card" onclick="window.open('game45.html')">
+                <div class="game-img" style="background:#44bb99;">雪花消除</div>
+                <div class="game-name">冰雪消消乐</div>
+            </div>
+            <!--46-->
+            <div class="game-card" onclick="window.open('game46.html')">
+                <div class="game-img" style="background:#aa4455;">糖果连线</div>
+                <div class="game-name">糖果连线</div>
+            </div>
+            <!--47-->
+            <div class="game-card" onclick="window.open('game47.html')">
+                <div class="game-img" style="background:#2255bb;">飞船躲避</div>
+                <div class="game-name">飞船逃亡</div>
+            </div>
+            <!--48-->
+            <div class="game-card" onclick="window.open('game48.html')">
+                <div class="game-img" style="background:#88aa55;">农场接蛋</div>
+                <div class="game-name">接鸡蛋</div>
+            </div>
+            <!--49-->
+            <div class="game-card" onclick="window.open('game49.html')">
+                <div class="game-img" style="background:#cc5522;">投石打罐</div>
+                <div class="game-name">投石闯关</div>
+            </div>
+            <!--50-->
+            <div class="game-card" onclick="window.open('game50.html')">
+                <div class="game-img" style="background:#443388;">星图配对</div>
+                <div class="game-name">星空记忆</div>
+            </div>
+            <!--51-->
+            <div class="game-card" onclick="window.open('game51.html')">
+                <div class="game-img" style="background:#22bb44;">藤蔓跳跃</div>
+                <div class="game-name">藤蔓跑酷</div>
+            </div>
+            <!--52-->
+            <div class="game-card" onclick="window.open('game52.html')">
+                <div class="game-img" style="background:#bb22aa;">糖果射击</div>
+                <div class="game-name">糖果大炮</div>
+            </div>
+            <!--53-->
+            <div class="game-card" onclick="window.open('game53.html')">
+                <div class="game-img" style="background:#7788bb;">云朵跳跃</div>
+                <div class="game-name">云端跳跳</div>
+            </div>
+            <!--54-->
+            <div class="game-card" onclick="window.open('game54.html')">
+                <div class="game-img" style="background:#ddbb77;">面包师</div>
+                <div class="game-name">面包制作</div>
+            </div>
+            <!--55-->
+            <div class="game-card" onclick="window.open('game55.html')">
+                <div class="game-img" style="background:#669922;">小虫觅食</div>
+                <div class="game-name">小虫大冒险</div>
+            </div>
+            <!--56-->
+            <div class="game-card" onclick="window.open('game56.html')">
+                <div class="game-img" style="background:#992244;">火焰飞镖</div>
+                <div class="game-name">飞镖挑战</div>
+            </div>
+            <!--57-->
+            <div class="game-card" onclick="window.open('game57.html')">
+                <div class="game-img" style="background:#228888;">海洋消除</div>
+                <div class="game-name">海洋对对碰</div>
+            </div>
+            <!--58-->
+            <div class="game-card" onclick="window.open('game58.html')">
+                <div class="game-img" style="background:#5555bb;">方块守卫</div>
+                <div class="game-name">塔防方块</div>
+            </div>
+            <!--59-->
+            <div class="game-card" onclick="window.open('game59.html')">
+                <div class="game-img" style="background:#bb9922;">宝箱寻宝</div>
+                <div class="game-name">寻宝探险</div>
+            </div>
+            <!--60-->
+            <div class="game-card" onclick="window.open('game60.html')">
+                <div class="game-img" style="background:#772255;">吸血鬼躲避</div>
+                <div class="game-name">暗夜逃亡</div>
+            </div>
+            <!--61-->
+            <div class="game-card" onclick="window.open('game61.html')">
+                <div class="game-img" style="background:#33aa44;">果园摘梨</div>
+                <div class="game-name">果园大丰收</div>
+            </div>
+            <!--62-->
+            <div class="game-card" onclick="window.open('game62.html')">
+                <div class="game-img" style="background:#aa66bb;">魔法翻牌</div>
+                <div class="game-name">魔法记忆牌</div>
+            </div>
+            <!--63-->
+            <div class="game-card" onclick="window.open('game63.html')">
+                <div class="game-img" style="background:#224499;">冰球对战</div>
+                <div class="game-name">桌面冰球</div>
+            </div>
+            <!--64-->
+            <div class="game-card" onclick="window.open('game64.html')">
+                <div class="game-img" style="background:#cc7733;">烤肉串</div>
+                <div class="game-name">烤串达人</div>
+            </div>
+            <!--65-->
+            <div class="game-card" onclick="window.open('game65.html')">
+                <div class="game-img" style="background:#448822;">竹林跑酷</div>
+                <div class="game-name">竹林冲刺</div>
+            </div>
+            <!--66-->
+            <div class="game-card" onclick="window.open('game66.html')">
+                <div class="game-img" style="background:#994477;">爱心收集</div>
+                <div class="game-name">爱心大收集</div>
+            </div>
+            <!--67-->
+            <div class="game-card" onclick="window.open('game67.html')">
+                <div class="game-img" style="background:#22bbbb;">雨滴躲避</div>
+                <div class="game-name">雨中求生</div>
+            </div>
+            <!--68-->
+            <div class="game-card" onclick="window.open('game68.html')">
+                <div class="game-img" style="background:#8833bb;">宝石射击</div>
+                <div class="game-name">宝石炮台</div>
+            </div>
+            <!--69-->
+            <div class="game-card" onclick="window.open('game69.html')">
+                <div class="game-img" style="background:#bb8866;">沙漠淘金</div>
+                <div class="game-name">沙漠寻宝</div>
+            </div>
+            <!--70-->
+            <div class="game-card" onclick="window.open('game70.html')">
+                <div class="game-img" style="background:#55aa77;">青蛙跳跳</div>
+                <div class="game-name">青蛙跳台</div>
+            </div>
+            <!--71-->
+            <div class="game-card" onclick="window.open('game71.html')">
+                <div class="game-img" style="background:#dd4466;">火焰方块</div>
+                <div class="game-name">火焰消除</div>
+            </div>
+            <!--72-->
+            <div class="game-card" onclick="window.open('game72.html')">
+                <div class="game-img" style="background:#3366bb;">宇宙记忆</div>
+                <div class="game-name">宇宙卡牌</div>
+            </div>
+            <!--73-->
+            <div class="game-card" onclick="window.open('game73.html')">
+                <div class="game-img" style="background:#99aa33;">蔬菜消消</div>
+                <div class="game-name">蔬菜对对碰</div>
+            </div>
+            <!--74-->
+            <div class="game-card" onclick="window.open('game74.html')">
+                <div class="game-img" style="background:#774422;">木屋逃生</div>
+                <div class="game-name">木屋迷宫</div>
+            </div>
+            <!--75-->
+            <div class="game-card" onclick="window.open('game75.html')">
+                <div class="game-img" style="background:#227744;">湖泊钓鱼</div>
+                <div class="game-name">休闲钓鱼</div>
+            </div>
+            <!--76-->
+            <div class="game-card" onclick="window.open('game76.html')">
+                <div class="game-img" style="background:#bb3399;">糖果迷宫</div>
+                <div class="game-name">糖果迷宫探险</div>
+            </div>
+            <!--77-->
+            <div class="game-card" onclick="window.open('game77.html')">
+                <div class="game-img" style="background:#6677aa;">雪球对战</div>
+                <div class="game-name">雪球大战</div>
+            </div>
+            <!--78-->
+            <div class="game-card" onclick="window.open('game78.html')">
+                <div class="game-img" style="background:#cc9955;">饼干工坊</div>
+                <div class="game-name">饼干制作</div>
+            </div>
+            <!--79-->
+            <div class="game-card" onclick="window.open('game79.html')">
+                <div class="game-img" style="background:#44aa55;">草原奔袭</div>
+                <div class="game-name">草原跑酷</div>
+            </div>
+            <!--80-->
+            <div class="game-card" onclick="window.open('game80.html')">
+                <div class="game-img" style="background:#aa2244;">陨石躲避</div>
+                <div class="game-name">陨石危机</div>
+            </div>
+            <!--81-->
+            <div class="game-card" onclick="window.open('game81.html')">
+                <div class="game-img" style="background:#225588;">海底打靶</div>
+                <div class="game-name">深海射击</div>
+            </div>
+            <!--82-->
+            <div class="game-card" onclick="window.open('game82.html')">
+                <div class="game-img" style="background:#88bb44;">果园捉虫</div>
+                <div class="game-name">果园卫士</div>
+            </div>
+            <!--83-->
+            <div class="game-card" onclick="window.open('game83.html')">
+                <div class="game-img" style="background:#9955bb;">魔法连线</div>
+                <div class="game-name">魔法连线消除</div>
+            </div>
+            <!--84-->
+            <div class="game-card" onclick="window.open('game84.html')">
+                <div class="game-img" style="background:#dd6622;">飞盘挑战</div>
+                <div class="game-name">飞盘接接乐</div>
+            </div>
+            <!--85-->
+            <div class="game-card" onclick="window.open('game85.html')">
+                <div class="game-img" style="background:#338877;">珊瑚探险</div>
+                <div class="game-name">珊瑚迷宫</div>
+            </div>
+            <!--86-->
+            <div class="game-card" onclick="window.open('game86.html')">
+                <div class="game-img" style="background:#773399;">幽灵卡牌</div>
+                <div class="game-name">幽灵记忆翻牌</div>
+            </div>
+            <!--87-->
+            <div class="game-card" onclick="window.open('game87.html')">
+                <div class="game-img" style="background:#bb7799;">蛋糕消除</div>
+                <div class="game-name">蛋糕消消乐</div>
+            </div>
+            <!--88-->
+            <div class="game-card" onclick="window.open('game88.html')">
+                <div class="game-img" style="background:#556622;">森林射击</div>
+                <div class="game-name">森林猎靶</div>
+            </div>
+            <!--89-->
+            <div class="game-card" onclick="window.open('game89.html')">
+                <div class="game-img" style="background:#442266;">星空跑酷</div>
+                <div class="game-name">星际奔跑</div>
+            </div>
+            <!--90-->
+            <div class="game-card" onclick="window.open('game90.html')">
+                <div class="game-img" style="background:#cc4488;">爱心射击</div>
+                <div class="game-name">爱心大炮</div>
+            </div>
+            <!--91-->
+            <div class="game-card" onclick="window.open('game91.html')">
+                <div class="game-img" style="background:#2299bb;">冰山跳跃</div>
+                <div class="game-img" style="background:#2299bb;">冰山跳跃</div>
+                <div class="game-name">冰山跳跳乐</div>
+            </div>
+            <!--92-->
+            <div class="game-card" onclick="window.open('game92.html')">
+                <div class="game-img" style="background:#aa8833;">面包消除</div>
+                <div class="game-name">面包对对碰</div>
+            </div>
+            <!--93-->
+            <div class="game-card" onclick="window.open('game93.html')">
+                <div class="game-img" style="background:#66bb77;">小虫跑酷</div>
+                <div class="game-name">小虫冲刺</div>
+            </div>
+            <!--94-->
+            <div class="game-card" onclick="window.open('game94.html')">
+                <div class="game-img" style="background:#bb2233;">熔岩躲避</div>
+                <div class="game-name">熔岩逃生</div>
+            </div>
+            <!--95-->
+            <div class="game-card" onclick="window.open('game95.html')">
+                <div class="game-img" style="background:#335599;">深海消除</div>
+                <div class="game-name">深海消消</div>
+            </div>
+            <!--96-->
+            <div class="game-card" onclick="window.open('game96.html')">
+                <div class="game-img" style="background:#882277;">古堡迷宫</div>
+                <div class="game-name">古堡探险</div>
+            </div>
+            <!--97-->
+            <div class="game-card" onclick="window.open('game97.html')">
+                <div class="game-img" style="background:#77bb22;">花园采摘</div>
+                <div class="game-name">花园采花</div>
+            </div>
+            <!--98-->
+            <div class="game-card" onclick="window.open('game98.html')">
+                <div class="game-img" style="background:#dd88bb;">云朵消除</div>
+                <div class="game-name">云朵消消</div>
+            </div>
+            <!--99-->
+            <div class="game-card" onclick="window.open('game99.html')">
+                <div class="game-img" style="background:#2277bb;">火箭飞行</div>
+                <div class="game-name">火箭大冒险</div>
+            </div>
+            <!--100-->
+            <div class="game-card" onclick="window.open('game100.html')">
+                <div class="game-img" style="background:#997744;">沙漠消除</div>
+                <div class="game-name">沙漠对对碰</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2026 大风大浪集团 版权所有
+    </footer>
+</body>
+</html>
