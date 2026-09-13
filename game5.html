@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>数字2048 - 2918.io</title><style>*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}body{background:radial-gradient(circle at 50% 0%,#151a2e,#0a0e1a);min-height:100vh;display:flex;flex-direction:column;align-items:center;color:#fff}header{width:100%;padding:14px 20px;background:rgba(17,24,39,.9);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}header a{color:#ff6600;text-decoration:none;font-size:14px}header h1{font-size:18px;color:#fff}#game{margin:20px auto;display:block;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px #ffbb2266}#info{margin:10px;font-size:16px;color:#ccc}.controls{margin:10px;display:flex;gap:10px}button{padding:12px 28px;border:none;border-radius:10px;background:linear-gradient(135deg,#ff6600,#ff8833);color:#fff;font-size:15px;cursor:pointer;box-shadow:0 4px 15px rgba(255,102,0,.4);transition:.2s}button:hover{transform:translateY(-2px)}button:active{transform:translateY(0)}button:hover{background:#ff8833}footer{margin-top:auto;padding:20px;width:100%;text-align:center;background:rgba(17,24,39,.8);color:#666;font-size:13px}footer b{color:#ff6600}</style>
+<style>#game{max-width:100%;height:auto;}</style>
+</head><body><header><a href="index.html">← 返回游戏列表</a><h1>数字2048</h1><a href="index.html">2918.io</a></header><canvas id="game" width="480" height="600"></canvas><div id="info">分数: 0</div><div class="controls"><button onclick="restart()">重新开始</button></div><footer>© 2026 <b>大风大浪集团</b> 版权所有 · 2918.io</footer><script>
+var g={grid:[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]],score:0};
+var c=document.getElementById('game'),x=c.getContext('2d');
+c.width=400;c.height=400;
+function add(){var e=[];for(var i=0;i<16;i++)if(!g.grid[Math.floor(i/4)][i%4])e.push(i);var p=e[Math.floor(Math.random()*e.length)];g.grid[Math.floor(p/4)][p%4]=2;}
+document.addEventListener('keydown',function(e){
+  var moved=false;
+  if(e.key==='ArrowUp'){for(var col=0;col<4;col++){for(var r=1;r<4;r++){if(g.grid[r][col]){var v=g.grid[r][col],rr=r;while(rr>0&&!g.grid[rr-1][col]){g.grid[rr-1][col]=v;g.grid[rr][col]=0;rr--;moved=true;}}}}}
+  if(e.key==='ArrowDown'){for(var col=0;col<4;col++){for(var r=2;r>=0;r--){if(g.grid[r][col]){var v=g.grid[r][col],rr=r;while(rr<3&&!g.grid[rr+1][col]){g.grid[rr+1][col]=v;g.grid[rr][col]=0;rr++;moved=true;}}}}}
+  if(e.key==='ArrowLeft'){for(var r=0;r<4;r++){for(var col=1;col<4;col++){if(g.grid[r][col]){var v=g.grid[r][col],cc=col;while(cc>0&&!g.grid[r][cc-1]){g.grid[r][cc-1]=v;g.grid[r][cc]=0;cc--;moved=true;}}}}}
+  if(e.key==='ArrowRight'){for(var r=0;r<4;r++){for(var col=2;col>=0;col--){if(g.grid[r][col]){var v=g.grid[r][col],cc=col;while(cc<3&&!g.grid[r][cc+1]){g.grid[r][cc+1]=v;g.grid[r][cc]=0;cc++;moved=true;}}}}}
+  if(moved)add();
+  draw();
+});
+function draw(){
+  x.fillStyle='#0a0e1a';x.fillRect(0,0,400,400);
+  var colors={0:'#222',2:'#333',4:'#444',8:'#ff8800',16:'#ff6600',32:'#ff4400',64:'#ff2200',128:'#ffdd00',256:'#ffff44',512:'#44ff44',1024:'#44ffff',2048:'#ff44ff'};
+  for(var r=0;r<4;r++)for(var col=0;col<4;col++){
+    var v=g.grid[r][col];
+    x.fillStyle=colors[v]||'#fff';
+    x.fillRect(col*100+2,r*100+2,96,96);
+    if(v){x.fillStyle='#fff';x.font='28px sans-serif';x.textAlign='center';x.fillText(v,col*100+50,r*100+55);}
+  }
+  document.getElementById('info').textContent='分数: '+g.score;
+}
+function restart(){g.grid=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];add();add();draw();}
+restart();
+
+/* ===== 触屏支持 ===== */
+(function(){
+  var c=document.getElementById('game');
+  if(!c)return;
+  function touchPos(t){
+    var r=c.getBoundingClientRect();
+    return {clientX:t.clientX,clientY:t.clientY};
+  }
+  c.addEventListener('touchstart',function(e){
+    e.preventDefault();
+    var t=e.touches[0];
+    var ev=new MouseEvent('click',{clientX:t.clientX,clientY:t.clientY,bubbles:true});
+    c.dispatchEvent(ev);
+  },{passive:false});
+  c.addEventListener('touchmove',function(e){
+    e.preventDefault();
+    var t=e.touches[0];
+    var ev=new MouseEvent('mousemove',{clientX:t.clientX,clientY:t.clientY,bubbles:true});
+    c.dispatchEvent(ev);
+  },{passive:false});
+  document.addEventListener('touchstart',function(e){
+    if(e.target.tagName==='BUTTON')return;
+  });
+})();
+
+/* ===== 触屏滑动模拟方向键 ===== */
+(function(){
+  var c=document.getElementById('game');
+  if(!c)return;
+  var sx=0,sy=0;
+  c.addEventListener('touchstart',function(e){
+    var t=e.touches[0];sx=t.clientX;sy=t.clientY;
+  },{passive:true});
+  c.addEventListener('touchend',function(e){
+    var t=e.changedTouches[0];
+    var dx=t.clientX-sx,dy=t.clientY-sy;
+    var key=null;
+    if(Math.abs(dx)>Math.abs(dy)){
+      key=dx>30?'ArrowRight':dx<-30?'ArrowLeft':null;
+    }else{
+      key=dy>30?'ArrowDown':dy<-30?'ArrowUp':null;
+    }
+    if(key){
+      document.dispatchEvent(new KeyboardEvent('keydown',{key:key,bubbles:true}));
+    }
+  },{passive:true});
+})();
+</script></body></html>
